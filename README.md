@@ -264,4 +264,4 @@ Now we can wrap all of the previous code into one function, ```diagonal_conversi
 Post-diagonal string: "142753869"
 ```
 ## Conclusion
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thanks for reading! Quick reminder that all of this code can be found over on my [Website](https://www.nthorn.com/blog/diagonal_traversal). Also be sure to read about my [FLS Test](link_coming_soon), which is where I originally needed to be able to read a matrix diagonally.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thanks for reading! Quick reminder that all of this code can be found over on my [Website](https://www.nthorn.com/blog/diagonal_traversal). Also be sure to read about my [FLS Test](https://www.nthorn.com/blog/fls_test), which is where I originally needed to be able to read a matrix diagonally.
