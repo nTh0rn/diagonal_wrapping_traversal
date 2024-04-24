@@ -16,10 +16,9 @@ def string_to_list(input):
 	outp=[[]]
 	x = -1 # Set to -1 since it is increased by 1 upon first use
 	y = 0
-	w = np.sqrt(len(input))
 	for char in input:
 		x += 1
-		if x == w:
+		if x == np.sqrt(len(input)):
 			outp.append([])
 			y += 1
 			x = 0
@@ -45,7 +44,7 @@ def diagonal_conversion(matrix):
 	# at the beginning lol)
 	def slider(header, y=False):
 		output = []
-		tail = header - l + 1
+		tail = header - len(basis) + 1
 
 		# If header or tail is out of bounds of the basis, reset them to the start/end
 		if tail < 0:
