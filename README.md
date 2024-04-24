@@ -6,7 +6,7 @@ Pre-diagonal string: "123456789"
 
 Post-diagonal string: "142753869"
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The goal of this project is to traverse a matrix diagonally while wrapping and storing the contents of each cell to a string. Be sure to checkout the full code on my [Website](https://www.nthorn.com/blog/diagonal_traversal). To understand why exactly someone might want to do this, read up on the random-test I developed, [The FLS Test](Link_coming_soon), for my [HRNG research](https://arxiv.org/abs/2404.09395).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The goal of this project is to traverse a matrix diagonally while wrapping and storing the contents of each cell to a string. Be sure to checkout the full code on my [Website](https://www.nthorn.com/blog/diagonal_traversal). To understand why exactly someone might want to do this, read up on the random-test I developed, [The FLS Test](https://www.nthorn.com/blog/fls_test), for my [HRNG research](https://arxiv.org/abs/2404.09395).
 
 So the tasks are relatively simple:
 1. [Convert the string to a matrix](#convert-a-string-to-a-matrix)
