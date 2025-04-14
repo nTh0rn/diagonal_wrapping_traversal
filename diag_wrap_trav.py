@@ -2,8 +2,6 @@
 Written by Nikolas Thornton
 https://www.nthorn.com/blog/diagonal_traversal
 """
-
-import numpy as np
 import math
 
 # Print a 2d list
@@ -12,19 +10,14 @@ def print_list(list):
         print(row)
 
 # Convert string of square-length to list
-def string_to_list(input):
-    outp=[[]]
-    x = -1 # Set to -1 since it is increased by 1 upon first use
-    y = 0
-    for char in input:
-        x += 1
-        if x == np.sqrt(len(input)):
-            outp.append([])
-            y += 1
-            x = 0
-        outp[y].append(char)
-    return outp
-    
+def string_to_list(string):
+    output=[]
+    side_len = math.isqrt(len(string))
+    for i in range(0,len(string)):
+        if (i) % side_len == 0:
+            output.append([])
+        output[-1].append(string[i])
+    return output
 
 # Convert matrix to diagonally-traversed string
 def diagonal_conversion(matrix):
@@ -39,20 +32,19 @@ def diagonal_conversion(matrix):
     for i in range(0, len(matrix)):
         basis.append(i)
 
-    # This slides along the "basis" selecting a side-length number of consecutive items in it, where the far
-    # end is denoted by the "header" and the back-end is denoted by the "tail"
-    def slider(header, y=False):
+    # Slides along the basis, start/end denoted by head/tail.
+    def slider(head, y=False):
         output = []
-        tail = header - len(basis) + 1
+        tail = head - len(basis) + 1
 
-        # If header or tail is out of bounds of the basis, reset them to the start/end
+        # If head or tail is out of bounds of the basis, reset them to the start/end
         if tail < 0:
-            tail += l - (header + 1)
-        if header > l - 1:
-            header -= header - (l - 1)
+            tail += l - (head + 1)
+        if head > l - 1:
+            head -= head - (l - 1)
 
-        # Iterate through the basis from the tail to header
-        for index in range(tail, header + 1):
+        # Iterate through the basis from the tail to head
+        for index in range(tail, head + 1):
             output.append(basis[index])
 
         # Reverse this output if its for the y-direction
@@ -82,6 +74,6 @@ print("Original string: \"" + original_string + "\"")
 print("Original string as matrix:")
 print_list(string_to_list(original_string))
 
-print("Diagonal string: \"" + diagonal_string + "\"")
+print("\nDiagonal string: \"" + diagonal_string + "\"")
 
 pause = input("")
