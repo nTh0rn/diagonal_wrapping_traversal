@@ -54,10 +54,8 @@ def diagonal_conversion(matrix):
 
     # Generate x and y coordinates
     for i in range(0, l * 2 - 1):
-        for item in slider(i):
-            x_coords.append(item)
-        for item in slider(i, True):
-            y_coords.append(item)
+        x_coords.extend(slider(i))
+        y_coords.extend(slider(i, True))
 
     # Walk along the matrix using the generated x and y coordinates.
     final_string = ""
